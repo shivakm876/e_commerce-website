@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-buttons">
+                <a href="index.html" class="nav-button">Home</a>
+                <a href="store.html" class="nav-button">Store</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="product-container">
+            <div class="product-image-container">
+                <div class="product-image">
+                    <img id="main-product-image" src="prod1.jpg" alt="Product Image">
+                </div>
+                <div class="product-thumbnails">
+                    <img src="cl1.jpg" alt="Product Color 1" class="thumbnail" onclick="updateMainImage('prod1-color1.jpg')">
+                    <img src="cl2.jpg" alt="Product Color 2" class="thumbnail" onclick="updateMainImage('prod1-color2.jpg')">
+                    <img src="cl3.jpg" alt="Product Color 3" class="thumbnail" onclick="updateMainImage('prod1-color3.jpg')">
+                    <img src="cl5.jpg" alt="Product Color 4" class="thumbnail" onclick="updateMainImage('prod1-color4.jpg')">
+                </div>
+            </div>
+            <div class="product-info">
+                <h2 id="product-title">The Gildan Ultra Cotton T-shirt</h2>
+                <p id="product-price">$139.00</p>
+                <label for="size">Select Size</label>
+                <select id="size">
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                    <option>Extra Large</option>
+                </select>
+
+                <!-- Quantity Field and Add to Cart Button -->
+                <div class="cart-actions">
+                    <div class="quantity-container">
+                        <input type="number" id="quantity" value="1" min="1">
+                    </div>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                </div>
+
+                <h3>Product Details</h3>
+                <p id="product-description">
+                    The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq. yd. fabric constructed from 100% cotton. This classic fit preshrunk jersey knit provides unmatched comfort with each wear. Featuring a taped neck and shoulder, a seamless double-needle collar, and available in a range of colors, it offers it all in the ultimate head-turning package.
+                </p>
+                <div class="buttons">
+                    <button class="add-to-cart-button">Add to Cart</button>
+                    <button class="bundle-save-button">Save Bundle</button>
+                    <button class="buy-now-button">Buy Now</button>
+                </div>
+                <!-- Icons Section (Below Buttons) -->
+                <div class="icons-container">
+                    <div class="icon-item">
+                        <img src="Background (2).jpg" alt="Unique Designs">
+                        <p>UNIQUE DESIGNS</p>
+                    </div>
+                    <div class="icon-item">
+                        <img src="Background (3).jng" alt="Quality Assurance">
+                        <p>QUALITY ASSURANCE</p>
+                    </div>
+                    <div class="icon-item">
+                        <img src="Background (6).png" alt="Safe Payments">
+                        <p>SAFE PAYMENTS</p>
+                    </div>
+                    <div class="icon-item">
+                        <img src="Background (4).png" alt="Quick Support">
+                        <p>QUICK SUPPORT</p>
+                    </div>
+                    <div class="icon-item">
+                        <img src="Background (5).png" alt="Made in India">
+                        <p>MADE IN INDIA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

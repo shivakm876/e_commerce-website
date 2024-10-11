@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Dresses - Our Featured Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f9fa;
+            padding: 10px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        .navbar ul li {
+            margin-left: 10px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .navbar ul li a:hover {
+            color: #007bff;
+        }
+
+        /* Pager Header Styling */
+        .pager-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 60vh;
+            background: url("banner.jpg") no-repeat center center;
+            background-size: cover;
+            padding: 14px;
+            text-align: center;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .pager-header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .store {
+            text-align: center;
+            margin: 80px 20px;
+        }
+
+        /* Featured products heading styling */
+        .store h1 {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 8px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+        }
+
+        .store p {
+            font-size: 1.2em;
+            color: #555;
+            margin: 5px 0 20px;
+        }
+
+        /* Container for the product grid */
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Product cards */
+        .product {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            box-sizing: border-box; /* Ensure consistent box model */
+            position: relative;
+        }
+
+        .product img {
+            width: 100%; /* Full width of the card */
+            height: 200px; /* Adjust to the size provided in the image */
+            border-bottom: 1px solid #ddd;
+            border-radius: 10px 10px 0 0;
+            object-fit: cover; /* Maintain aspect ratio and crop to fit */
+        }
+
+        .product h2 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .product p {
+            font-size: 16px;
+            color: #333;
+            margin: 5px 0;
+        }
+
+        .product .brand {
+            font-size: 14px;
+            font-style: italic;
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        /* Rating section */
+        .product .rating {
+            color: #ffcc00;
+            margin: 10px 0;
+            text-align: center; /* Center rating stars */
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Cart icon styling */
+        .product .cart-icon {
+            color: #007bff;
+            font-size: 24px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 123, 255, 0.2);
+            border-radius: 50%;
+        }
+
+        .product .cart-icon i {
+            margin: 0;
+        }
+
+        .product .cart-icon:hover {
+            color: #0056b3;
+        }
+
+        /* Pagination styles */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .pagination a {
+            text-decoration: none;
+            padding: 8px 16px;
+            background-color: #0056b3;
+            border-radius: 4px;
+            color: white;
+            border: 1px solid #ddd;
+        }
+
+        .pagination a:hover {
+            background-color: #004494;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="store.html">Shop</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Cart</a></li>
+        </ul>
+    </div>
+
+    <!-- Pager Header -->
+    <header class="pager-header">
+        <h1>#Stayhome</h1>
+    </header>
+
+    <!-- Store Content -->
+    <div class="store">
+        <h1>Our Featured Products</h1>
+        <p>Summer collection with new modern design</p>
+
+        <div class="product-list">
+            <!-- Product 1 -->
+            <div class="product">
+                <a href="product.html?id=1">
+                    <img src="prod1.jpg" alt="Men's Dress 1">
+                    <div class="brand">adidas</div>
+                    <h2>Cartoon Astronaut T-Shirts</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>$78</p>
+                </a>
+                <div class="cart-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product">
+                <a href="product.html?id=2">
+                    <img src="prod2.jpg" alt="Men's Dress 2">
+                    <div class="brand">Nike</div>
+                    <h2>Vintage Polo Shirt</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>$95</p>
+                </a>
+                <div class="cart-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product">
+                <a href="product.html?id=3">
+                    <img src="prod3.jpg" alt="Men's Dress 3">
+                    <div class="brand">Puma</div>
+                    <h2>Striped Casual Shirt</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>$89</p>
+                </a>
+                <div class="cart-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product">
+                <a href="product.html?id=4">
+                    <img src="prod4.jpg" alt="Men's Dress 4">
+                    <div class="brand">Reebok</div>
+                    <h2>Graphic Print Hoodie</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>$65</p>
+                </a>
+                <div class="cart-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product">
+                <a href="product.html?id=5">
+                    <img src="f1.jpg" alt="Men's Dress 5">
+                    <div class="brand">Under Armour</div>
+                    <h2>Solid Color Sweatshirt</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>$72</p>
+                </a>
+                <div class="cart-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product">
+                <a href="product.html?id=6">
+                    <img src="f2.jpg" alt="Men's Dress 6">
+                    <div class="brand">New Balance</div>
+                    <h2>Logo Print Joggers</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>$85</p>
+                </a>
+                <div class="cart-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product">
+                <a href="product.html?id=7">
+                    <img src="f3.jpg" alt="Men's Dress 7">
+                    <div class="brand">Adidas</div>
+                    <h2>Zip-Up Track Jacket</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>$99</p>
+                </a>
+                <div class="cart-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product">
+                <a href="product.html?id=8">
+                    <img src="f4.jpg" alt="Men's Dress 8">
+                    <div class="brand">Nike</div>
+                    <h2>Classic Fit Chino Pants</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>$78</p>
+                </a>
+                <div class="cart-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="product">
+                <a href="product.html?id=9">
+                    <img src="f5.jpg" alt="Men's Dress 9">
+                    <div class="brand">Puma</div>
+                    <h2>Short Sleeve Polo</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>$88</p>
+                </a>
+                <div class="cart-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="product">
+                <a href="product.html?id=10">
+                    <img src="f6.jpg" alt="Men's Dress 10">
+                    <div class="brand">Reebok</div>
+                    <h2>Regular Fit Cargo Shorts</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>$82</p>
+                </a>
+                <div class="cart-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <div class="product">
+                <a href="product.html?id=1">
+                    <img src="n1.jpg" alt="Men's Dress 1">
+                    <div class="brand">adidas</div>
+                    <h2>Cartoon Astronaut T-Shirts</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>$78</p>
+                </a>
+                <div class="cart-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product">
+                <a href="product.html?id=2">
+                    <img src="n2.jpg" alt="Men's Dress 2">
+                    <div class="brand">Nike</div>
+                    <h2>Vintage Polo Shirt</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>$95</p>
+                </a>
+                <div class="cart-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product">
+                <a href="product.html?id=3">
+                    <img src="n3 (1).jpg" alt="Men's Dress 3">
+                    <div class="brand">Puma</div>
+                    <h2>Striped Casual Shirt</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>$89</p>
+                </a>
+                <div class="cart-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product">
+                <a href="product.html?id=4">
+                    <img src="n4.jpg" alt="Men's Dress 4">
+                    <div class="brand">Reebok</div>
+                    <h2>Graphic Print Hoodie</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>$65</p>
+                </a>
+                <div class="cart-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product">
+                <a href="product.html?id=5">
+                    <img src="n5.jpg" alt="Men's Dress 5">
+                    <div class="brand">Under Armour</div>
+                    <h2>Solid Color Sweatshirt</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>$72</p>
+                </a>
+                <div class="cart-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product">
+                <a href="product.html?id=6">
+                    <img src="n6.jpg" alt="Men's Dress 6">
+                    <div class="brand">New Balance</div>
+                    <h2>Logo Print Joggers</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>$85</p>
+                </a>
+                <div class="cart-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product">
+                <a href="product.html?id=7">
+                    <img src="n7.jpg" alt="Men's Dress 7">
+                    <div class="brand">Adidas</div>
+                    <h2>Zip-Up Track Jacket</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>$99</p>
+                </a>
+                <div class="cart-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product">
+                <a href="product.html?id=8">
+                    <img src="n8.jpg" alt="Men's Dress 8">
+                    <div class="brand">Nike</div>
+                    <h2>Classic Fit Chino Pants</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>$78</p>
+                </a>
+                <div class="cart-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="product">
+                <a href="product.html?id=9">
+                    <img src="f10.jpg" alt="Men's Dress 9">
+                    <div class="brand">Puma</div>
+                    <h2>Short Sleeve Polo</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>$88</p>
+                </a>
+                <div class="cart-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="product">
+                <a href="product.html?id=10">
+                    <img src="f9.jpg" alt="Men's Dress 10">
+                    <div class="brand">Reebok</div>
+                    <h2>Regular Fit Cargo Shorts</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>$82</p>
+                </a>
+                <div class="cart-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            
+              
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="#">&laquo; Previous</a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">Next &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

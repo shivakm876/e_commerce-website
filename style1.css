@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Container for the whole product details page */
+.product-container {
+    display: flex;
+    padding: 20px;
+    align-items: flex-start;
+    justify-content: space-between; /* Ensure space between thumbnails and info */
+}
+
+/* Container for the images (both thumbnails and the main image) */
+.product-image-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Thumbnails section (vertical images for different colors) */
+.product-thumbnails {
+    display: flex;
+    flex-direction: column;
+    margin-right: 110px; /* Space between thumbnails and main image */
+}
+
+.product-thumbnails img {
+    width: 100px; /* Adjust width to your preference */
+    height: 135px; /* Maintain the aspect ratio */
+    margin-bottom: 20px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    transition: border 0.3s ease;
+}
+
+/* Change border color on hover to highlight the image */
+.product-thumbnails img:hover {
+    border: 2px solid #000;
+}
+
+/* Main product image styling */
+.product-image {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.product-image img {
+    width: 400px; /* Adjust as needed */
+    height: auto;
+    border: 1px solid #ddd;
+    object-fit: cover;
+}
+
+/* Styling for the product details (title, price, description) */
+.product-info {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.product-info h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    margin: 10px 0;
+}
+
+/* Styling for the buttons and quantity input field */
+.cart-actions {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+input[type="number"] {
+    padding: 5px;
+    font-size: 14px;
+    width: 80px; /* Short width */
+    box-sizing: border-box;
+}
+
+.add-to-cart-button,
+.bundle-save-button,
+.buy-now-button {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.add-to-cart-button:hover,
+.bundle-save-button:hover,
+.buy-now-button:hover {
+    background-color: #218838;
+}
+
+.bundle-save-button {
+    background-color: #007bff;
+}
+
+.bundle-save-button:hover {
+    background-color: #0056b3;
+}
+
+.buy-now-button {
+    background-color: #ffc107;
+}
+
+.buy-now-button:hover {
+    background-color: #e0a800;
+}
+
+h3 {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #333;
+}
+
+#product-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Header and navigation styling */
+header {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 0.5em; /* Reduced gap between buttons */
+}
+
+.nav-button {
+    padding: 5px 10px; /* Smaller padding for smaller buttons */
+    text-decoration: none;
+    color: #000; /* Text color */
+    background-color: #fff; /* White background */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px;
+    font-size: 12px; /* Smaller font size */
+    font-weight: bold;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #f8f9fa; /* Slightly darker background on hover */
+    border-color: #999; /* Darker border color on hover */
+}
+
+/* Container for icons (directly below buttons) */
+.icons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Space between buttons and icons */
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.icon-item img {
+    width: 60px; /* Adjust as per the actual size of your icons */
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.icon-item p {
+    font-size: 14px;
+    color: #FF5722;
+    font-weight: bold;
+}

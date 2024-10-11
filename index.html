@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Your Website With Background Video</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="banner">
+        <video autoplay loop muted playsinline>
+            <source src="videonature.mp4" type="video/mp4">
+        </video>
+        <div class="navbar">
+            <!-- Logo removed -->
+            <ul>
+                <li><a href="#" id="login-link">Login</a></li>
+                <li><a href="#">Contact</a></li>
+            
+                <li><a href="store.html">Store</a></li> <!-- Updated link -->
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>EXPLORE THE WORLD</h1>
+            <button type="button" class="explore-btn">Explore</button>
+        </div>
+    </div>
+
+    <!-- Login Form Container -->
+    <div class="login-container" id="login-container" style="display: none;">
+        <div class="login-form">
+            <span class="close-btn" id="close-login-btn">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm" onsubmit="return validateForm()">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                    <span class="icon">✉</span>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                    <span class="icon">🔒</span>
+                </div>
+                <div class="options">
+                    <label><input type="checkbox" id="rememberMe"> Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit">Login</button>
+                <div class="register-link">
+                    <p>Don't have an account? <a href="#" id="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Create Account Form Container -->
+    <div class="register-container" id="register-container" style="display: none;">
+        <div class="register-form">
+            <span class="close-btn" id="close-register-btn">&times;</span>
+            <h2>Create Account</h2>
+            <form id="registerForm" onsubmit="return validateRegisterForm()">
+                <div class="input-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" placeholder="Enter your email" required>
+                    <span class="icon">✉</span>
+                </div>
+                <div class="input-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" placeholder="Enter your password" required>
+                    <span class="icon">🔒</span>
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                    <span class="icon">🔒</span>
+                </div>
+                <button type="submit">Create Account</button>
+                <div class="login-link">
+                    <p>Already have an account? <a href="#" id="login-return-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Social Media Icons -->
+    <div class="icons">
+        <ul>
+            <li><i class="fab fa-twitter"></i></li>
+            <li><i class="fab fa-whatsapp"></i></li>
+            <li><i class="fab fa-instagram"></i></li>
+        </ul>
+    </div>
+    <div class="social-icons">
+        <ul>
+          <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
+        </ul>
+      </div>
+      
+
+    <script src="script.js"></script>
+</body>
+</html>
